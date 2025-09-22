@@ -152,6 +152,9 @@ void RotEv::begin() {
   SPI1.begin();
   enc1.begin();
   enc2.begin();
+
+  // Delay to let the pull-up charge the capacitors
+  delay(10);
 }
 
 float RotEv::readYawRateDegrees() {
